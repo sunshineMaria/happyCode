@@ -1,0 +1,45 @@
+.title {
+	font-size: 26px;
+	color: #566772;
+}
+
+.refresh_btn {
+	margin-left: 10px;
+	color: #757575;
+	text-decoration: none;
+}
+
+.content {
+	width:300px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.user {
+	position: relative;
+	font-size: 22px;
+	color: #000;
+	border: 1px solid #ddd;
+}
+
+a {
+	text-decoration: none;
+}
+
+.user_name {
+	margin-left: 20px;
+}
+
+.user_avater {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-size: contain;
+}
+
+.close_btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #566772;
+}
