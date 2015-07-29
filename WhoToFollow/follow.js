@@ -1,5 +1,5 @@
 var Offset = 0;
-var dataList = [];
+var userList = [];
 var refreshButton = $('.refresh');
 var SHOWNUM = 3;
 var innerContent = $( '.content' );
@@ -16,8 +16,8 @@ function getList() {
     type: 'GET',
     dataType: 'json',
     success: function( data ) {
-      dataList = data;
-      AMOUNT = dataList.length - 1;
+      userList = data;
+      AMOUNT = userList.length - 1;
       refresh();
     }
   })
@@ -27,10 +27,10 @@ function getSingle() {
     renderSingle()
 }
 
-function render( dataList ) {   
+function render( userList ) {   
   for( var i = 0; i < SHOWNUM ; i ++ ){
     console.log( Offset );
-    renderTpl( dataList[ Offset++ ] );
+    renderTpl( userList[ Offset++ ] );
   }
 }
 
@@ -52,7 +52,7 @@ function close() {
     console.log( Offset );
     var container = $( this ).parent();
     container.empty();
-    replaceTpl( dataList[Offset], container );
+    replaceTpl( userList[Offset], container );
   }
 }
 
@@ -62,7 +62,7 @@ function refresh() {
       SHOWNUM = AMOUNT - Offset + 1;
     }
     $( '.content' ).empty();
-    render( dataList );
+    render( userList );
   }
 }
 
